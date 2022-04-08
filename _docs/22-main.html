@@ -1,0 +1,843 @@
+---
+title: "Main"
+permalink: /docs/main/
+excerpt: "How to."
+last_modified_at: 2018-03-20T15:19:22-04:00
+---
+
+
+<!DOCTYPE html> 
+<html> 
+<head> <title>GNU ARM     </title> 
+<meta charset='UTF-8' /> 
+<meta content='TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)' name='generator' /> 
+<link href='/assets/css/htlatex.css' rel='stylesheet' type='text/css' /> 
+ <!-- for beautifying <link href='site.css' rel='stylesheet' type='text/css' />  -->
+<script type='text/x-mathjax-config'> MathJax.Hub.Config({ extensions: ["tex2jax.js"], jax: ["input/TeX", "output/HTML-CSS"], tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes: true }, "HTML-CSS": { availableFonts: ["TeX"] } }); </script> <script src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' type='text/javascript'></script> 
+</head><body>
+   <div class='maketitle'>
+                                                                     
+
+                                                                     
+                                                                     
+
+                                                                     
+
+<h2 class='titleHead'>GNU ARM &#50612&#49480&#48660&#47532 &#49892&#49845 &#54872&#44221 &#44396&#52629 &#48169&#48277</h2>
+ <div class='author'>&#48149&#49457&#54840</div><br />
+<div class='date'><span class='cmr-12'>2022</span>&#54617&#45380&#46020 <span class='cmr-12'>1</span>&#54617&#44592</div>
+   </div>
+   <h3 class='sectionHead' id='-'><span class='titlemark'>1   </span> <a id='x1-10001'></a>&#44060&#48156 &#46020&#44396 &#49444&#52824&#54616&#44592</h3>
+<p>
+   </p> 
+
+   <h4 class='subsectionHead' id='-1'><span class='titlemark'>1.1   </span> <a id='x1-20001.1'></a>&#50952&#46020&#50864 &#50868&#50689&#52404&#51228</h4>
+<p>&#51060 &#51109&#50640&#49436&#45716 &#50952&#46020&#50864 &#50868&#50689&#52404&#51228&#50640&#49436 GNU ARM &#50612&#49480&#48660&#47532 &#49892&#49845&#50640 &#54596&#50836&#54620 &#44060&#48156 &#46020&#44396&#47484 &#49444&#52824&#54616&#45716 &#48169&#48277&#51012 &#49444&#47749&#54633&#45768&#45796. GNU ARM &#50612&#49480&#48660&#47532 &#49892&#49845&#51012 &#50948&#54644&#49436&#45716 &#50500&#47000&#50752 &#44057&#51008 &#44060&#48156 &#46020&#44396&#46308&#51060 &#54596&#50836&#54633&#45768&#45796.
+</p> 
+<p>
+     </p> 
+<ol class='enumerate1'>
+<li class='enumerate' id='x1-2002x1'>
+     <p>Toolchain (C/C++ compiler, assembler, linker, and binary utilities)
+     </p> 
+
+          <ul class='itemize1'>
+          <li class='itemize'>GNU ARM Embedded Toolchain</li></ul>
+     </li>
+<li class='enumerate' id='x1-2004x2'>
+     <p>Version control system </p> 
+
+          <ul class='itemize1'>
+          <li class='itemize'>Git</li></ul>
+                                                                     
+
+                                                                     
+     </li>
+<li class='enumerate' id='x1-2006x3'>Python
+     </li>
+<li class='enumerate' id='x1-2008x4'>
+     <p>Build utilities </p> 
+
+          <ul class='itemize1'>
+          <li class='itemize'>CMake
+          </li>
+          <li class='itemize'>Make (MSYS2 &#54056&#53412&#51648 &#49324&#50857)
+          </li>
+          <li class='itemize'>Unix utilities (MSYS2 &#54056&#53412&#51648 &#49324&#50857)</li></ul>
+     </li>
+<li class='enumerate' id='x1-2010x5'>
+     <p>ARM processor emulator (Virtual machine) </p> 
+
+          <ul class='itemize1'>
+          <li class='itemize'>QEMU</li></ul>
+     </li>
+<li class='enumerate' id='x1-2012x6'>
+     <p>IDE (Integrated Development Environmeent) </p> 
+
+          <ul class='itemize1'>
+          <li class='itemize'>VSCode</li></ul>
+     </li></ol>
+                                                                     
+
+                                                                     
+<p>
+   </p> 
+
+   <h5 class='subsubsectionHead' id='gnu-arm-embedded-toolchain-'><span class='titlemark'>1.1.1   </span> <a id='x1-30001.1.1'></a>GNU ARM Embedded Toolchain &#49444&#52824&#54616&#44592</h5>
+     <ul class='itemize1'>
+     <li class='itemize'>
+     <p>&#45796&#51020 &#50937&#49324&#51060&#53944&#50640&#49436 <strong><span class='cmbx-10x-x-109'>gcc-arm-none-eabi-10.3-2021.10</span></strong> &#49444&#52824 &#54056&#53412&#51648&#47484 &#48155&#50500&#49436 &#49444&#52824&#54633&#45768&#45796.<br class='newline' />(&#48176&#54252&#54616&#45716 &#49892&#49845 &#50696&#51228&#46308&#51008 gcc-arm-none-eabi-10.3-2021.10&#50640&#49436 &#49884&#54744&#46104&#50632&#49845&#45768&#45796.)
+     </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>
+          <p><a class='url' href='https://developer.arm.com'><span class='cmtt-10x-x-109'>https://developer.arm.com</span></a> </p> 
+
+              <ul class='itemize3'>
+              <li class='itemize'>Downloads Tools and Software <!-- l. 153 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+              Open Source <!-- l. 153 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+              <br class='newline' />Developer Tools <!-- l. 154 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+              GNU Toolchain <!-- l. 154 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+              Downloads <!-- l. 154 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+              <br class='newline' />GNU toolchain releases for Embedded processors (discontinued)
+              <!-- l. 155 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+              <br class='newline' />gcc-arm-none-eabi-10.3-2021.10-win32.exe</li></ul>
+          </li>
+          <li class='itemize'>
+          <p>&#49444&#52824&#49884&#50640 &#48320&#44221&#54644&#50556&#54616&#45716 &#49440&#53469&#49324&#54637 </p> 
+
+              <ul class='itemize3'>
+              <li class='itemize'>Add path to environment variable: Check</li></ul>
+          </li></ul>
+     </li></ul>
+<p>
+   </p> 
+
+   <h5 class='subsubsectionHead' id='git-'><span class='titlemark'>1.1.2   </span> <a id='x1-40001.1.2'></a>Git &#49444&#52824&#54616&#44592</h5>
+                                                                     
+
+                                                                     
+     <ul class='itemize1'>
+     <li class='itemize'>
+     <p>&#45796&#51020 &#50937&#49324&#51060&#53944&#50640&#49436 &#49444&#52824 &#54056&#53412&#51648&#47484 &#48155&#50500&#49436 &#49444&#52824&#54633&#45768&#45796. </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'><a class='url' href='https://git-scm.com'><span class='cmtt-10x-x-109'>https://git-scm.com</span></a></li></ul>
+     </li></ul>
+<p>
+   </p> 
+
+   <h5 class='subsubsectionHead' id='python-'><span class='titlemark'>1.1.3   </span> <a id='x1-50001.1.3'></a>Python &#49444&#52824&#54616&#44592</h5>
+     <ul class='itemize1'>
+     <li class='itemize'>
+     <p>&#45796&#51020 &#50937&#49324&#51060&#53944&#50640&#49436 <strong><span class='cmbx-10x-x-109'>Python 3.9</span></strong> &#49444&#52824 &#54056&#53412&#51648&#47484 &#48155&#50500&#49436 &#49444&#52824&#54633&#45768&#45796.<br class='newline' />(&#48260&#51204 3.10&#51008 &#50500&#51649 &#54840&#54872&#49457&#50640 &#47928&#51228&#44032 &#51080&#45716 &#47784&#46280&#46308&#51060 &#51080&#50612&#49436 &#48260&#51204 3.9&#47484 &#49324&#50857&#54633&#45768&#45796.) </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'><a class='url' href='https://python.org'><span class='cmtt-10x-x-109'>https://python.org</span></a>
+          </li>
+          <li class='itemize'>
+          <p>&#49444&#52824&#49884&#50640 &#48320&#44221&#54644&#50556&#54616&#45716 &#49440&#53469&#49324&#54637 </p> 
+
+              <ul class='itemize3'>
+              <li class='itemize'>Add Python 3.9 to PATH: Check</li></ul>
+          </li></ul>
+     </li></ul>
+<p>
+   </p> 
+
+   <h5 class='subsubsectionHead' id='cmake-'><span class='titlemark'>1.1.4   </span> <a id='x1-60001.1.4'></a>CMake &#49444&#52824&#54616&#44592</h5>
+     <ul class='itemize1'>
+     <li class='itemize'>
+     <p>&#45796&#51020 &#50937&#49324&#51060&#53944&#50640&#49436 &#49444&#52824 &#54056&#53412&#51648&#47484 &#48155&#50500&#49436 &#49444&#52824&#54633&#45768&#45796. </p> 
+
+                                                                     
+
+                                                                     
+          <ul class='itemize2'>
+          <li class='itemize'><a class='url' href='https://cmake.org'><span class='cmtt-10x-x-109'>https://cmake.org</span></a>
+          </li>
+          <li class='itemize'>
+          <p>&#49444&#52824&#49884&#50640 &#48320&#44221&#54644&#50556&#54616&#45716 &#49440&#53469&#49324&#54637 </p> 
+
+              <ul class='itemize3'>
+              <li class='itemize'>Add CMake to the system PATH for all users: Select</li></ul>
+          </li></ul>
+     </li></ul>
+<p>
+   </p> 
+
+   <h5 class='subsubsectionHead' id='msys-'><span class='titlemark'>1.1.5   </span> <a id='x1-70001.1.5'></a>MSYS2 &#49444&#52824&#54616&#44592</h5>
+<p>
+     </p> 
+<ol class='enumerate1'>
+<li class='enumerate' id='x1-7002x1'>
+     <p>&#45796&#51020 &#50937&#49324&#51060&#53944&#50640&#49436 &#49444&#52824 &#54056&#53412&#51648&#47484 &#48155&#50500&#49436 &#49444&#52824&#54633&#45768&#45796. </p> 
+
+          <ul class='itemize1'>
+          <li class='itemize'><a class='url' href='http://www.msys2.org'><span class='cmtt-10x-x-109'>http://www.msys2.org</span></a></li></ul>
+     </li>
+<li class='enumerate' id='x1-7004x2'>
+     <p>&#44256&#44553 &#49884&#49828&#53596 &#49444&#51221&#51012 &#50672 &#54980, &#49324&#50857&#51088 &#54872&#44221 &#48320&#49688 ”Path”&#50640 &#49444&#52824&#46108 &#49892&#54665 &#54028&#51068 &#44221&#47196&#47484 &#52628&#44032&#54633&#45768&#45796. </p> 
+
+          <ul class='itemize1'>
+          <li class='itemize'>&#49884&#51089 <!-- l. 218 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          &#49444&#51221<!-- l. 218 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mtext class='MathClass-rel'>→</mtext></math>
+          &#49884&#49828&#53596<!-- l. 218 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mtext class='MathClass-rel'>→</mtext></math>
+          &#51221&#48372<!-- l. 218 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mtext class='MathClass-rel'>→</mtext></math>
+          &#44256&#44553&#49884&#49828&#53596&#49444&#51221<!-- l. 218 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mtext class='MathClass-rel'>→</mtext></math>
+          <br class='newline' />&#54872&#44221&#48320&#49688<!-- l. 219 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mtext class='MathClass-rel'>→</mtext></math>
+          &#49324&#50857&#51088&#48320&#49688<!-- l. 219 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mtext class='MathClass-rel'>→</mtext></math>
+          Path <!-- l. 219 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          &#49352&#47196&#47564&#46308&#44592
+                                                                     
+
+                                                                     
+          </li>
+          <li class='itemize'>&#49444&#52824&#46108 &#49892&#54665&#54028&#51068&#44221&#47196&#45716&#49444&#52824&#51473&#50640&#54869&#51064&#54624&#49688&#51080&#51004&#47728, <br class='newline' />&#44592&#48376 &#44050&#51008 <span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>C:\msys64\usr\bin</span></span></span> &#51077&#45768&#45796.</li></ul>
+     </li>
+<li class='enumerate' id='x1-7006x3'>
+     <p>&#47749&#47161&#50612 &#54532&#47212&#54532&#53944, ”cmd”&#47484 &#49892&#54665&#54633&#45768&#45796. </p> 
+
+          <ul class='itemize1'>
+          <li class='itemize'>&#50952&#46020&#50864&#53412 + R <!-- l. 227 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          cmd <!-- l. 227 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          &#54869&#51064</li></ul>
+     </li>
+<li class='enumerate' id='x1-7008x4'>
+     <p>&#45796&#51020 &#47749&#47161&#46308&#51012&#52264&#47168&#47196&#51077&#47141&#54644 MSYS2&#47484 &#50629&#44536&#47112&#51060&#46300&#54633&#45768&#45796.<br class='newline' />(<strong>&#49444&#52824 &#51473&#50640 &#54868&#47732&#51060 &#51109&#44592&#44036 &#44081&#49888&#46104&#51648 &#50506&#51004&#47732 &#50644&#53552&#53412&#47484 &#51077&#47141&#54633&#45768&#45796<span class='cmbx-10x-x-109'>.</span></strong>) 
+     <span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-7009r1'></a></span></p> 
+<!-- l. 233 --><pre class='listings'><span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-7010r2'></a></span><span style='color:#000000'><span class='cmtt-10x-x-109'>pacman</span></span><span style='color:#000000'> <span class='cmtt-10x-x-109'>-Syu</span></span><span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-7011r3'></a></span><span style='color:#000000'><span class='cmtt-10x-x-109'>pacman</span></span><span style='color:#000000'> <span class='cmtt-10x-x-109'>-Su</span>
+     </span><span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-7012r4'></a></span></pre>
+     <p>
+     </p> 
+</li>
+<li class='enumerate' id='x1-7014x5'>
+     <p>&#45796&#51020 &#47749&#47161&#51012 &#51077&#47141&#54644 Make&#50752 &#54596&#50836&#54620 Unix utilities&#47484 &#49444&#52824&#54633&#45768&#45796. 
+     <span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-7015r1'></a></span></p> 
+<!-- l. 240 --><pre class='listings'><span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-7016r2'></a></span><span style='color:#000000'><span class='cmtt-10x-x-109'>pacman</span></span><span style='color:#000000'> <span class='cmtt-10x-x-109'>-S </span><span class='cmtt-10x-x-109'>--needed </span><span class='cmtt-10x-x-109'>base-devel </span><span class='cmtt-10x-x-109'>mingw-w64-x86_64-toolchain</span>
+     </span><span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-7017r3'></a></span></pre>
+     <p></p> 
+</li></ol>
+<p>
+   </p> 
+
+   <h5 class='subsubsectionHead' id='qemu-'><span class='titlemark'>1.1.6   </span> <a id='x1-80001.1.6'></a>QEMU &#49444&#52824&#54616&#44592</h5>
+<p>
+                                                                     
+
+                                                                     
+     </p> 
+<ol class='enumerate1'>
+<li class='enumerate' id='x1-8002x1'>
+     <p>&#45796&#51020 &#50937&#49324&#51060&#53944&#50640&#49436 &#49444&#52824 &#54056&#53412&#51648&#47484 &#48155&#50500&#49436 &#49444&#52824&#54633&#45768&#45796. </p> 
+
+          <ul class='itemize1'>
+          <li class='itemize'><a class='url' href='https://www.qemu.org'><span class='cmtt-10x-x-109'>https://www.qemu.org</span></a></li></ul>
+     </li>
+<li class='enumerate' id='x1-8004x2'>
+     <p>&#44256&#44553 &#49884&#49828&#53596 &#49444&#51221&#51012 &#50672 &#54980, &#49324&#50857&#51088 &#54872&#44221 &#48320&#49688 ”Path”&#50640 &#49444&#52824&#46108 &#49892&#54665 &#54028&#51068 &#44221&#47196&#47484 &#52628&#44032&#54633&#45768&#45796. </p> 
+
+          <ul class='itemize1'>
+          <li class='itemize'>&#49884&#51089 <!-- l. 256 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          &#49444&#51221<!-- l. 256 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mtext class='MathClass-rel'>→</mtext></math>
+          &#49884&#49828&#53596<!-- l. 256 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mtext class='MathClass-rel'>→</mtext></math>
+          &#51221&#48372<!-- l. 256 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mtext class='MathClass-rel'>→</mtext></math>
+          &#44256&#44553&#49884&#49828&#53596&#49444&#51221<!-- l. 256 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mtext class='MathClass-rel'>→</mtext></math>
+          <br class='newline' />&#54872&#44221&#48320&#49688<!-- l. 257 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mtext class='MathClass-rel'>→</mtext></math>
+          &#49324&#50857&#51088&#48320&#49688<!-- l. 257 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mtext class='MathClass-rel'>→</mtext></math>
+          Path <!-- l. 257 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          &#49352&#47196&#47564&#46308&#44592
+          </li>
+          <li class='itemize'>&#49444&#52824&#46108 &#49892&#54665&#54028&#51068&#44221&#47196&#45716&#49444&#52824&#51473&#50640&#54869&#51064&#54624&#49688&#51080&#51004&#47728, <br class='newline' />&#44592&#48376 &#44050&#51008 <span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>C:\Program Files\qemu</span></span></span> &#51077&#45768&#45796.</li></ul>
+     </li></ol>
+<p>
+   </p> 
+
+   <h5 class='subsubsectionHead' id='vscode-'><span class='titlemark'>1.1.7   </span> <a id='x1-90001.1.7'></a>VSCode &#49444&#52824&#54616&#44592</h5>
+<p>
+     </p> 
+<ol class='enumerate1'>
+<li class='enumerate' id='x1-9002x1'>
+     <p>&#45796&#51020 &#50937&#49324&#51060&#53944&#50640&#49436 &#49444&#52824 &#54056&#53412&#51648&#47484 &#48155&#50500&#49436 &#49444&#52824&#54633&#45768&#45796. </p> 
+
+                                                                     
+
+                                                                     
+          <ul class='itemize1'>
+          <li class='itemize'><a class='url' href='https://code.visualstudio.com'><span class='cmtt-10x-x-109'>https://code.visualstudio.com</span></a></li></ul>
+     </li>
+<li class='enumerate' id='x1-9004x2'>
+     <p>&#49444&#52824&#44032 &#50756&#47308&#46104&#47732 VSCode&#47484 &#49892&#54665 &#49884&#53416 &#54980, Extension view&#47484 &#50676&#50612&#49436 &#45796&#51020 extension&#46308&#51012 &#49444&#52824&#54633&#45768&#45796. </p> 
+
+          <ul class='itemize1'>
+          <li class='itemize'>C/C++ (by Microsoft)
+          </li>
+          <li class='itemize'>C/C++ Themes (by Microsoft)
+          </li>
+          <li class='itemize'>Python (by Microsoft)
+          </li>
+          <li class='itemize'>CodeLLDB (by Vadim Chugunov)
+          </li>
+          <li class='itemize'>CMake (by twxs)
+          </li>
+          <li class='itemize'>ARM Assembly (by dan-c-underwood)</li></ul>
+     </li></ol>
+<p>
+   </p> 
+
+   <h3 class='sectionHead' id='-vscode-'><span class='titlemark'>2   </span> <a id='x1-100002'></a>&#49548&#49828 &#53076&#46300 &#44032&#51256&#50724&#44592 &#48143 VSCode&#47196 &#49548&#49828 &#53076&#46300 &#50676&#44592</h3>
+<p>
+   </p> 
+
+   <h4 class='subsectionHead' id='-2'><span class='titlemark'>2.1   </span> <a id='x1-110002.1'></a>&#50952&#46020&#50864 &#50868&#50689&#52404&#51228</h4>
+<p>&#51060 &#51109&#50640&#49436&#45716 &#50952&#46020&#50864 &#50868&#50689&#52404&#51228&#50640&#49436 &#49892&#49845&#50857 &#49548&#49828 &#53076&#46300&#47484 &#44032&#51256&#50752 VSCode&#47196 &#50668&#45716 &#48169&#48277&#51012 &#49444&#47749&#54633&#45768&#45796.
+</p> 
+<p>
+                                                                     
+
+                                                                     
+     </p> 
+<ol class='enumerate1'>
+<li class='enumerate' id='x1-11002x1'>
+     <p>&#47749&#47161&#50612 &#54532&#47212&#54532&#53944, ”cmd”&#47484 &#49892&#54665&#54633&#45768&#45796. </p> 
+
+          <ul class='itemize1'>
+          <li class='itemize'>&#50952&#46020&#50864&#53412 + R <!-- l. 296 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          cmd <!-- l. 296 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          &#54869&#51064</li></ul>
+     </li>
+<li class='enumerate' id='x1-11004x2'>
+     <p>&#45796&#51020 &#47749&#47161&#50612&#47484&#51077&#47141&#54644&#51089&#50629&#46356&#47113&#53664&#47532&#47484&#49373&#49457&#54620&#54980, &#44536&#44275&#51004&#47196 &#51060&#46041&#54633&#45768&#45796. 
+     <span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-11005r1'></a></span></p> 
+<!-- l. 301 --><pre class='listings'><span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-11006r2'></a></span><span style='color:#000000'><span class='cmtt-10x-x-109'>cd</span></span><span style='color:#000000'> <span class='cmtt-10x-x-109'>\</span></span><span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-11007r3'></a></span><span style='color:#000000'><span class='cmtt-10x-x-109'>mkdir</span></span><span style='color:#000000'> <span class='cmtt-10x-x-109'>Workspace</span></span><span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-11008r4'></a></span><span style='color:#000000'><span class='cmtt-10x-x-109'>cd</span></span><span style='color:#000000'> <span class='cmtt-10x-x-109'>Workspace</span>
+     </span><span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-11009r5'></a></span></pre>
+     <p>
+     </p> 
+</li>
+<li class='enumerate' id='x1-11011x3'>
+     <p>&#45796&#51020 &#47749&#47161&#50612&#47484 &#51077&#47141&#54644 &#54532&#47196&#51229&#53944 &#44288&#47532 &#46020&#44396, ”mkubiprj.py”&#47484 &#44032&#51256&#50741&#45768&#45796.<br class='newline' />(&#50504&#54000 &#48148&#51060&#47084&#49828 &#54532&#47196&#44536&#47016 &#46412&#47928&#50640 &#50724&#47448&#44032 &#48156&#49373&#54624 &#44221&#50864, &#47749&#47161 &#47560&#51648&#47561&#50640 ”–no-check-certificate”&#47484 &#52628&#44032&#54644 &#51452&#47732 &#46121&#45768&#45796.) 
+     <span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-11012r1'></a></span></p> 
+<!-- l. 310 --><pre class='listings'><span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-11013r2'></a></span><span style='color:#000000'><span class='cmtt-10x-x-109'>wget</span></span><span style='color:#000000'> <span class='cmtt-10x-x-109'>https://ubinos.org/tool/mkubiprj.py</span>
+     </span><span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-11014r3'></a></span></pre>
+     <p>
+     </p> 
+</li>
+<li class='enumerate' id='x1-11016x4'>
+     <p>&#45796&#51020 &#47749&#47161&#51012 &#51077&#47141&#54644 &#49548&#49828 &#53076&#46300&#47484 &#44032&#51256&#50741&#45768&#45796. 
+     <span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-11017r1'></a></span></p> 
+<!-- l. 316 --><pre class='listings'><span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-11018r2'></a></span><span style='color:#000000'><span class='cmtt-10x-x-109'>python</span></span><span style='color:#000000'> <span class='cmtt-10x-x-109'>mkubiprj.py </span><span class='cmtt-10x-x-109'>ubiworks</span>
+     </span><span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-11019r3'></a></span></pre>
+     <p>
+     </p> 
+</li>
+<li class='enumerate' id='x1-11021x5'>
+     <p>&#45796&#51020 &#47749&#47161&#51012 &#51077&#47141&#54644 VSCode&#47196 &#49548&#49828 &#53076&#46300&#47484 &#50685&#45768&#45796. 
+                                                                     
+
+                                                                     
+     <span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-11022r1'></a></span></p> 
+<!-- l. 322 --><pre class='listings'><span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-11023r2'></a></span><span style='color:#000000'><span class='cmtt-10x-x-109'>code</span></span><span style='color:#000000'> <span class='cmtt-10x-x-109'>ubiworks</span>
+     </span><span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-11024r3'></a></span></pre>
+     <p>
+     </p> 
+</li></ol>
+<p>
+   </p> 
+
+   <h3 class='sectionHead' id='vscode-1'><span class='titlemark'>3   </span> <a id='x1-120003'></a>VSCode&#50640&#49436 &#49892&#49845&#50857 &#49548&#49828 &#53076&#46300&#51032 &#50696&#51228 &#48716&#46300 &#48143 &#49892&#54665&#54616&#44592</h3>
+<p>&#51060 &#51109&#50640&#49436&#45716 VSCode&#50640&#49436 &#49892&#49845&#50857 &#49548&#49828 &#53076&#46300&#51032 &#50696&#51228&#47484 &#48716&#46300&#54616&#44256 &#49892&#54665&#54616&#45716 &#48169&#48277&#51012 &#49444&#47749&#54633&#45768&#45796. &#49892&#49845&#50857 &#50696&#51228&#45716 <span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>mp_course_example</span></span></span> &#54532&#47196&#51229&#53944&#50640 &#54252&#54632&#46104&#50612 &#51080&#51004&#47728, &#50696&#51228&#46308 &#51473 <span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>_qemu</span></span></span>&#47196 &#45149&#45208&#45716 &#44163&#46308&#51060 QEMU&#47484 &#49324&#50857&#54644 &#53440&#44191 &#48372&#46300 &#50630&#51060 &#49892&#54665 &#54624 &#49688 &#51080&#45716 &#44163&#46308&#51077&#45768&#45796. &#51060 &#51109&#50640&#49436&#45716
+<span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>mp_course_ex0506_hello_world_3_stm32vldisco_baremetal_qemu</span></span></span>&#47484 &#49440&#53469&#54644 &#48716&#46300&#54616&#44256 &#49892&#54665&#54616&#45716 &#44284&#51221&#51012 &#49444&#47749&#54633&#45768&#45796. &#51060 &#50696&#51228&#45716
+QEMU&#51032 &#44032&#49345 UART &#54252&#53944&#47196 ”Hello World!”&#47484 &#52636&#47141&#54616&#45716 &#44036&#45800&#54620 &#50612&#49480&#48660&#47532 &#54532&#47196&#44536&#47016&#51077&#45768&#45796.
+</p> 
+<p>
+   </p> 
+
+   <h4 class='subsectionHead' id='-3'><span class='titlemark'>3.1   </span> <a id='x1-130003.1'></a>&#50952&#46020&#50864 &#50868&#50689&#52404&#51228</h4>
+<p>
+   </p> 
+
+   <h5 class='subsubsectionHead' id='-4'><span class='titlemark'>3.1.1   </span> <a id='x1-140003.1.1'></a>&#49892&#49845&#50857 &#49548&#49828 &#53076&#46300&#47484 &#52572&#49888 &#48260&#51204&#51004&#47196 &#50629&#44536&#47112&#51060&#46300 &#54616&#44592</h5>
+<p>
+     </p> 
+<ol class='enumerate1'>
+<li class='enumerate' id='x1-14002x1'>
+     <p>&#45796&#51020 &#47700&#45684&#47484 &#49440&#53469&#54644 Run Build Task... &#52285&#51012 &#50685&#45768&#45796. </p> 
+
+          <ul class='itemize1'>
+          <li class='itemize'>VSCode <!-- l. 346 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          Menu <!-- l. 346 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          Terminal <!-- l. 346 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          Run Build Task... (&#45800&#52629&#53412: Ctrl + Shift + B)</li></ul>
+     </li>
+<li class='enumerate' id='x1-14004x2'>Run Build Task... &#52285&#50640&#49436 make upgrade&#47484 &#49440&#53469&#54644 &#49892&#54665&#54633&#45768&#45796.</li></ol>
+                                                                     
+
+                                                                     
+<p>
+   </p> 
+
+   <h5 class='subsubsectionHead' id='-5'><span class='titlemark'>3.1.2   </span> <a id='x1-150003.1.2'></a>&#50696&#51228 &#49440&#53469&#54616&#44592</h5>
+<p>
+     </p> 
+<ol class='enumerate1'>
+<li class='enumerate' id='x1-15002x1'>
+     <p>&#45796&#51020 &#47700&#45684&#47484 &#49440&#53469&#54644 Run Build Task... &#52285&#51012 &#50685&#45768&#45796. </p> 
+
+          <ul class='itemize1'>
+          <li class='itemize'>VSCode <!-- l. 358 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          Menu <!-- l. 358 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          Terminal <!-- l. 358 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          Run Build Task... (&#45800&#52629&#53412: Ctrl + Shift + B)</li></ul>
+     </li>
+<li class='enumerate' id='x1-15004x2'>Run Build Task... &#52285&#50640&#49436 make xsel&#51012 &#49440&#53469&#54644 &#49892&#54665&#54633&#45768&#45796.
+     </li>
+<li class='enumerate' id='x1-15006x3'>Config selector &#52285&#51060 &#46888&#47732 &#45796&#51020 &#50696&#47484 &#49440&#53469&#54620 &#45796&#51020 <span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>Select</span></span></span> &#48260&#53948&#51012 &#45572&#47493&#45768&#45796.<br class='newline' />Project: <span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>mp_course_example</span></span></span> <br class='newline' />Name: <span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>mp_course_ex0506_hello_world_3_stm32vldisco_baremetal_qemu</span></span></span></li></ol>
+<p>
+   </p> 
+
+   <h5 class='subsubsectionHead' id='-6'><span class='titlemark'>3.1.3   </span> <a id='x1-160003.1.3'></a>&#50696&#51228 &#48716&#46300&#54616&#44592</h5>
+<p>
+     </p> 
+<ol class='enumerate1'>
+<li class='enumerate' id='x1-16002x1'>
+     <p>&#45796&#51020 &#47700&#45684&#47484 &#49440&#53469&#54644 Run Build Task... &#52285&#51012 &#50685&#45768&#45796. </p> 
+
+          <ul class='itemize1'>
+          <li class='itemize'>VSCode <!-- l. 374 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          Menu <!-- l. 374 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          Terminal <!-- l. 374 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          Run Build Task... (&#45800&#52629&#53412: Ctrl + Shift + B)</li></ul>
+     </li>
+<li class='enumerate' id='x1-16004x2'>
+     <p>Run Build Task... &#52285&#50640&#49436 make rebuildd&#47484 &#49440&#53469&#54644 &#49892&#54665&#54633&#45768&#45796. </p> 
+
+          <ul class='itemize1'>
+          <li class='itemize'>rebuildd&#45716 clean and remove output directory, config, &#44536&#47532&#44256 build&#47484 &#52264&#47168&#47196 &#49688&#54665&#54633&#45768&#45796.</li></ul>
+     </li></ol>
+<p>
+   </p> 
+
+   <h5 class='subsubsectionHead' id='-7'><span class='titlemark'>3.1.4   </span> <a id='x1-170003.1.4'></a>&#50696&#51228 &#49892&#54665&#54616&#44592</h5>
+<p>
+     </p> 
+<ol class='enumerate1'>
+<li class='enumerate' id='x1-17002x1'>
+     <p>&#45796&#51020 &#47700&#45684&#47484 &#49440&#53469&#54644 Run and Debug View&#47484 &#50685&#45768&#45796. </p> 
+
+          <ul class='itemize1'>
+          <li class='itemize'>VSCode <!-- l. 389 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          Menu <!-- l. 389 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          View <!-- l. 389 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          Run (&#45800&#52629&#53412: Ctrl + Shift + D)</li></ul>
+     </li>
+<li class='enumerate' id='x1-17004x2'>
+     <p>&#51340&#52769 &#49345&#45800&#51032 Run and Debug Configuration &#53092&#48372 &#48149&#49828&#50640&#49436 <span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>ARM Target (build load)</span></span></span>&#47484 &#49440&#53469&#54633&#45768&#45796.
+     </p> 
+
+          <ul class='itemize1'>
+          <li class='itemize'>&#44592&#48376 &#44050&#51060 <span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>ARM Target (build load)</span></span></span>&#51077&#45768&#45796.</li></ul>
+                                                                     
+
+                                                                     
+     </li>
+<li class='enumerate' id='x1-17006x3'>
+     <p>&#45796&#51020 &#47700&#45684&#47484 &#49440&#53469&#54644 &#46356&#48260&#44613&#51012 &#49884&#51089&#54633&#45768&#45796. </p> 
+
+          <ul class='itemize1'>
+          <li class='itemize'>VSCode <!-- l. 399 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          Menu <!-- l. 399 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          Run <!-- l. 399 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          Start Debugging (&#45800&#52629&#53412: F5)</li></ul>
+     </li>
+<li class='enumerate' id='x1-17008x4'>&#46356&#48260&#44613&#51060 &#51221&#49345&#51201&#51004&#47196 &#49884&#51089&#46104&#47732 <span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>Reset_Handler</span></span></span> &#49548&#49828 &#53076&#46300&#44032 &#54364&#49884&#46104&#44256, &#54532&#47196&#49464&#49436&#45716 &#51060 <span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>Reset_Handler</span></span></span> &#49884&#51089&#51216&#50640&#49436 &#45824&#44592&#54633&#45768&#45796.</li></ol>
+<p>
+   </p> 
+
+   <h5 class='subsubsectionHead' id='-appmain-'><span class='titlemark'>3.1.5   </span> <a id='x1-180003.1.5'></a>&#50696&#51228&#51032 &#54532&#47196&#44536&#47016 &#49884&#51089 &#54632&#49688, appmain&#50640 &#48652&#47112&#51060&#53356 &#54252&#51064&#53944 &#49444&#51221&#54616&#44592</h5>
+<p>&#48652&#47112&#51060&#53356 &#54252&#51064&#53944&#45716 &#46356&#48260&#44613&#51012 &#50948&#54644 &#49688&#54665&#51012 &#47688&#52628&#45716 &#51648&#51216&#51004&#47196, Run and Debug View&#51032 Breakpoints &#52285&#50640&#49436 &#46608&#45716 &#49548&#49828 &#53076&#46300&#51032 &#51460 &#48264&#54840 &#51340&#52769&#51012 &#53364&#47533&#54644 &#49444&#51221 &#48143 &#54644&#51228&#54624 &#49688 &#51080&#49845&#45768&#45796. &#50500&#47000 &#44284&#51221&#51012 &#49688&#54665&#54644 &#54532&#47196&#44536&#47016 &#49884&#51089 &#54632&#49688&#51064 appmain&#50640 &#48652&#47112&#51060&#53356 &#54252&#51064&#53944&#47484 &#49444&#51221&#54633&#45768&#45796.
+</p> 
+<p>
+     </p> 
+<ol class='enumerate1'>
+<li class='enumerate' id='x1-18002x1'>Run and Debug View&#51032 Breakpoints &#52285&#51032 &#50864&#52769 &#49345&#45800&#50640 &#52964&#49436&#47484 &#50948&#52824&#49884&#53412&#47732 <span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>+</span></span></span> &#48260&#53948&#51060 &#45208&#53440&#45225&#45768&#45796.
+     </li>
+<li class='enumerate' id='x1-18004x2'><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>+</span></span></span> &#48260&#53948&#51012 &#45580&#47084 &#48652&#47112&#51060&#53356 &#54252&#51064&#53944&#47484 &#49373&#49457&#54633&#45768&#45796.
+     </li>
+<li class='enumerate' id='x1-18006x3'><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>appmain</span></span></span>&#51012 &#51077&#47141&#54616&#44256 &#50644&#53552&#53412&#47484 &#45572&#47493&#45768&#45796.</li></ol>
+                                                                     
+
+                                                                     
+<p>
+   </p> 
+
+   <h5 class='subsubsectionHead' id='-8'><span class='titlemark'>3.1.6   </span> <a id='x1-190003.1.6'></a>&#50696&#51228 &#49892&#54665&#54616&#44592</h5>
+<p>&#45796&#51020 &#47749&#47161&#50612&#46308&#51012 &#49688&#54665&#54644 &#50696&#51228&#47484 &#50896&#54616&#45716 &#50948&#52824&#44620&#51648 &#49892&#54665&#54624 &#54633&#45768&#45796. &#51060 &#47749&#47161&#46308&#51008 Run &#47700&#45684&#50640&#49436 &#49892&#54665 &#54624 &#49688&#46020 &#51080&#44256, &#46356&#48260&#44613&#51060 &#49884&#51089&#46104&#47732 &#45208&#53440&#45208&#45716 Run &#53812&#48148&#51032 &#48260&#53948&#51012 &#53364&#47533&#54644 &#49892&#54665&#54624 &#49688&#46020 &#51080&#49845&#45768&#45796.
+   </p> 
+
+     <ul class='itemize1'>
+     <li class='itemize'>
+     <p>Continue </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>(&#48652&#47112&#51060&#53356 &#54252&#51064&#53944&#47484 &#47564&#45224 &#46321&#51032 &#48652&#47112&#51060&#53356 &#49345&#54889&#51060 &#48156&#49373&#54624 &#46412&#44620&#51648) &#44228&#49549 &#49688&#54665</li></ul>
+     </li>
+     <li class='itemize'>
+     <p>Step Over </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#45796&#51020 &#51460&#44620&#51648 &#49688&#54665
+          </li>
+          <li class='itemize'>&#54632&#49688&#47484 &#47564&#45208&#46020 &#44536&#45285 &#49892&#54665&#54632</li></ul>
+     </li>
+     <li class='itemize'>
+     <p>Step Into </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#45796&#51020 &#51460&#44620&#51648 &#49688&#54665
+          </li>
+          <li class='itemize'>&#54632&#49688&#47484 &#47564&#45208&#47732 &#54632&#49688 &#45236&#48512&#47196 &#46308&#50612&#44048</li></ul>
+     </li>
+     <li class='itemize'>
+     <p>Step Out </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#54788&#51116 &#49688&#54665 &#51473&#51064 &#54632&#49688&#47484 &#45149&#44620&#51648 &#49688&#54665&#54632</li></ul>
+     </li></ul>
+                                                                     
+
+                                                                     
+<p>
+   </p> 
+
+   <h5 class='subsubsectionHead' id='-9'><span class='titlemark'>3.1.7   </span> <a id='x1-200003.1.7'></a>&#48320&#49688, &#47112&#51648&#49828&#53552, &#53084 &#49828&#53469 &#54869&#51064&#54616&#44592</h5>
+     <ul class='itemize1'>
+     <li class='itemize'>&#51648&#50669 &#48320&#49688&#50752 &#47112&#51648&#49828&#53552&#51032 &#44050&#51008 Run and Debug View&#51032 Variables &#52285&#50640&#49436 &#54869&#51064&#54624 &#49688 &#51080&#49845&#45768&#45796.
+     </li>
+     <li class='itemize'>&#51204&#50672 &#48320&#49688 &#44050&#51008 Run and Debug View&#51032 Watch &#52285&#50640&#49436 &#46321&#47197&#54644&#49436 &#54869&#51064&#54624 &#49688 &#51080&#49845&#45768&#45796.
+     </li>
+     <li class='itemize'>&#53084 &#49828&#53469&#51008 Run and Debug View&#51032 Call Stack &#52285&#50640&#49436 &#54869&#51064&#54624 &#49688 &#51080&#49845&#45768&#45796.</li></ul>
+<p>
+   </p> 
+
+   <h5 class='subsubsectionHead' id='gdb-'><span class='titlemark'>3.1.8   </span> <a id='x1-210003.1.8'></a>GDB &#47749&#47161&#50612 &#49892&#54665&#54616&#44592</h5>
+<p>Debug Console View&#51032 &#47592 &#50500&#47000&#50640 &#50948&#52824&#54620 &#51077&#47141&#50857 &#53581&#49828&#53944 &#48149&#49828&#50640 &#45796&#51020&#44284 &#44057&#51060 GDB &#47749&#47161&#51012 &#51649&#51217 &#51077&#47141&#54644 &#49892&#54665&#54624 &#49688 &#51080&#49845&#45768&#45796. 
+<span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-21001r1'></a></span></p> 
+<!-- l. 463 --><pre class='listings'><span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-21002r2'></a></span><span style='color:#000000'><span class='cmtt-10x-x-109'>-</span></span><span style='color:#000000'><span class='cmtt-10x-x-109'>exec</span></span><span style='color:#000000'> <span class='cmtt-10x-x-109'>&lt;gdb </span><span class='cmtt-10x-x-109'>command&gt;</span>
+</span><span class='cmtt-10x-x-109'> </span><br /><span class='label'><a id='x1-21003r3'></a></span></pre>
+<p>
+   </p> 
+
+<p><span class='paragraphHead' id='-10'><a id='x1-220003.1.8'></a>&#49548&#49828 &#53076&#46300 &#48372&#44592 &#47749&#47161</span>
+   </p> 
+
+     <ul class='itemize1'>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>l (list)</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#54788&#51116 &#49688&#54665 &#51473&#51064 &#49548&#49828 &#53076&#46300 &#48512&#53552 &#51060&#54980 &#49548&#49828 &#53076&#46300&#46308&#51012 &#52264&#47168&#47196 &#48372&#50668&#51456&#45796.</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>set listisze &lt;number&gt;</span></span></span> </p> 
+
+                                                                     
+
+                                                                     
+          <ul class='itemize2'>
+          <li class='itemize'>&#54620&#48264&#50640 &#52636&#47141&#54616&#45716 &#49548&#49828 &#53076&#46300 &#51460 &#49688&#47484 &#49444&#51221&#54620&#45796.</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>l &lt;line number&gt;</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#54788&#51116 &#49688&#54665 &#51473&#51064 &#49548&#49828 &#53076&#46300 &#54028&#51068&#51032 &#51648&#51221&#54620 &#51460&#51012 &#48372&#50668&#51456&#45796.</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>l &lt;function name&gt;</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#51648&#51221&#54620 &#54632&#49688&#51032 &#49548&#49828 &#53076&#46300&#47484 &#48372&#50668&#51456&#45796.</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>l &lt;file name&gt;:&lt;function name&gt;</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#51648&#51221&#54620 &#49548&#49828 &#54028&#51068&#51032 &#51648&#51221&#54620 &#54632&#49688&#51032 &#49548&#49828 &#53076&#46300&#47484 &#48372&#50668&#51456&#45796.</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>l &lt;file name&gt;:&lt;line number&gt;</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#51648&#51221&#54620 &#49548&#49828 &#54028&#51068&#51032 &#51648&#51221&#54620 &#51460&#51012 &#48372&#50668&#51456&#45796.</li></ul>
+     </li></ul>
+<p><span class='paragraphHead' id='-11'><a id='x1-230003.1.8'></a>&#49892&#54665 &#47749&#47161</span>
+   </p> 
+
+     <ul class='itemize1'>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>n (next)</span></span></span> </p> 
+
+                                                                     
+
+                                                                     
+          <ul class='itemize2'>
+          <li class='itemize'>&#45796&#51020 &#51460&#44620&#51648 &#49688&#54665&#54620&#45796.
+          </li>
+          <li class='itemize'>&#54632&#49688&#47484 &#47564&#45208&#46020 &#45236&#48512&#47196 &#46308&#50612&#44032&#51648 &#50506&#45716&#45796. (Step Over)</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>s (step)</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#45796&#51020 &#51460&#44620&#51648 &#49688&#54665&#54620&#45796.
+          </li>
+          <li class='itemize'>&#54632&#49688&#47484 &#47564&#45208&#47732 &#45236&#48512&#47196 &#46308&#50612&#44036&#45796. (Step Into)</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>c (continue)</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>(&#48652&#47112&#51060&#53356 &#54252&#51064&#53944&#47484 &#47564&#45224 &#46321&#51032 &#48652&#47112&#51060&#53356 &#49345&#54889&#51060 &#48156&#49373&#54624 &#46412&#44620&#51648) &#44228&#49549 &#49688&#54665&#54620&#45796.</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>u (until)</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#54788&#51116 &#49688&#54665 &#51473&#51064 for, while &#47336&#54532&#47484 &#45149&#44620&#51648 &#49688&#54665&#54620&#45796.</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>finish</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#54788&#51116 &#49688&#54665 &#51473&#51064 &#54632&#49688&#47484 &#45149&#44620&#51648 &#49688&#54665&#54620&#45796. (Step Out)</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>si</span></span></span> </p> 
+
+                                                                     
+
+                                                                     
+          <ul class='itemize2'>
+          <li class='itemize'>&#54788&#51116 PC&#44032 &#44032&#47532&#53412&#45716 &#47749&#47161&#51012 &#49688&#54665&#54620&#45796.
+          </li>
+          <li class='itemize'>&#54632&#49688&#47484 &#47564&#45208&#46020 &#45236&#48512&#47196 &#46308&#50612&#44032&#51648 &#50506&#45716&#45796.</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>ni</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#54788&#51116 PC&#44032 &#44032&#47532&#53412&#45716 &#47749&#47161&#51012 &#49688&#54665&#54620&#45796.
+          </li>
+          <li class='itemize'>&#54632&#49688&#47484 &#47564&#45208&#47732 &#45236&#48512&#47196 &#46308&#50612&#44036&#45796.</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>k (kill)</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#54532&#47196&#44536&#47016 &#49688&#54665&#51012 &#51333&#47308&#54620&#45796.</li></ul>
+     </li></ul>
+<p><span class='paragraphHead' id='-12'><a id='x1-240003.1.8'></a>&#54840&#52636 &#49828&#53469 &#48372&#44592 &#47749&#47161</span>
+   </p> 
+
+     <ul class='itemize1'>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>bt (backtrace)</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#54840&#52636 &#49828&#53469&#51012 &#48372&#50668&#51456&#45796.</li></ul>
+     </li></ul>
+                                                                     
+
+                                                                     
+<p><span class='paragraphHead' id='-13'><a id='x1-250003.1.8'></a>&#51473&#45800&#51216 &#49444&#51221 &#47749&#47161</span>
+   </p> 
+
+     <ul class='itemize1'>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>b (break)</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#54788&#51116 &#49688&#54665 &#51473&#51064 &#49548&#49828 &#53076&#46300&#50640 &#51473&#45800&#51216&#51012 &#49444&#51221&#54620&#45796.</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>b &lt;function name&gt;</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#51648&#51221&#54620 &#54632&#49688&#50640 &#51473&#45800&#51216&#51012 &#49444&#51221&#54620&#45796.</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>b &lt;line number&gt;</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#54788&#51116 &#49688&#54665 &#51473&#51064 &#49548&#49828 &#53076&#46300 &#54028&#51068&#51032 &#51648&#51221&#54620 &#51460&#50640 &#51473&#45800&#51216&#51012 &#49444&#51221&#54620&#45796.</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>b +&lt;number&gt;</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#54788&#51116 &#49688&#54665 &#51473&#51064 &#49548&#49828 &#53076&#46300&#51032 &#51648&#51221&#54620 &#49688 &#47564&#53372 &#45796&#51020 &#51460&#50640 &#51473&#45800&#51216&#51012 &#49444&#51221&#54620&#45796.</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>b -&lt;number&gt;</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#54788&#51116 &#49688&#54665 &#51473&#51064 &#49548&#49828 &#53076&#46300&#51032 &#51648&#51221&#54620 &#49688 &#47564&#53372 &#51060&#51204 &#51460&#50640 &#51473&#45800&#51216&#51012 &#49444&#51221&#54620&#45796.</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>b *&lt;address&gt;</span></span></span> </p> 
+
+                                                                     
+
+                                                                     
+          <ul class='itemize2'>
+          <li class='itemize'>&#51648&#51221&#54620 &#51452&#49548&#50640 &#51473&#45800&#51216&#51012 &#49444&#51221&#54620&#45796.</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>b &lt;line number&gt; if &lt;</span>&#51312&#44148&#47928<span class='cmtt-10x-x-109'>&gt;</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#54788&#51116 &#49688&#54665 &#51473&#51064 &#49548&#49828 &#53076&#46300 &#54028&#51068&#51032 &#51648&#51221&#54620 &#51460&#50640 &#51648&#51221&#54620 &#51312&#44148&#51012 &#47564&#51313&#54624 &#46412&#47564 &#46041&#51089&#54616&#45716 &#51312&#44148 &#51473&#45800&#51216&#51012 &#49444&#51221&#54620&#45796.
+          </li>
+          <li class='itemize'>
+          <p>&#50696: SystemCoreClock&#51060 8000000 &#48372&#45796 &#53364 &#44221&#50864&#50640&#47564 29&#48264 &#51460&#50640&#49436 &#47688&#52632&#45796. </p> 
+
+              <ul class='itemize3'>
+              <li class='itemize'><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>b 29 if SystemCoreClock &gt; 8000000</span></span></span></li></ul>
+          </li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>tb</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#54788&#51116 &#49688&#54665 &#51473&#51064 &#49548&#49828 &#53076&#46300&#50640 &#51068&#54924&#50857 &#51473&#45800&#51216&#51012 &#49444&#51221&#54620&#45796.</li></ul>
+     </li></ul>
+<p><span class='paragraphHead' id='-14'><a id='x1-260003.1.8'></a>&#51473&#45800&#51216 &#48372&#44592 &#47749&#47161</span>
+   </p> 
+
+     <ul class='itemize1'>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>info b</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#54788&#51116 &#49444&#51221&#46108 &#51473&#45800&#51216&#46308&#51012 &#48372&#50668&#51456&#45796.</li></ul>
+     </li></ul>
+                                                                     
+
+                                                                     
+<p><span class='paragraphHead' id='-15'><a id='x1-270003.1.8'></a>&#51473&#45800&#51216 &#49325&#51228 &#47749&#47161</span>
+   </p> 
+
+     <ul class='itemize1'>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>cl (clear)</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#47784&#46304 &#51473&#45800&#51216&#51012 &#49325&#51228&#54620&#45796.</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>cl &lt;function name&gt;</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#51648&#51221&#54620 &#54632&#49688&#50640 &#49444&#51221&#46108 &#51473&#45800&#51216&#51012 &#49325&#51228&#54620&#45796.</li></ul>
+     </li></ul>
+<p><span class='paragraphHead' id='-16'><a id='x1-280003.1.8'></a>&#48320&#49688 &#48372&#44592 &#47749&#47161</span>
+   </p> 
+
+     <ul class='itemize1'>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>info locals</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#51648&#50669 &#48320&#49688&#46308&#51012 &#48372&#50668&#51456&#45796.</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>info variables</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#51204&#50669 &#48320&#49688 &#47785&#47197&#51012 &#48372&#50668&#51456&#45796.</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>p &lt;variable name&gt;</span></span></span> </p> 
+
+                                                                     
+
+                                                                     
+          <ul class='itemize2'>
+          <li class='itemize'>&#51648&#51221&#54620 &#48320&#49688&#50640 &#51200&#51109&#46108 &#44050&#51012 &#48372&#50668&#51456&#45796.</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>p &lt;pointer variable name&gt;</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#51648&#51221&#54620 &#54252&#51064&#53552 &#48320&#49688&#50640 &#51200&#51109&#46108 &#51452&#49548&#47484 &#48372&#50668&#51456&#45796.</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>p *&lt;pointer variable name&gt;</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>&#51648&#51221&#54620 &#54252&#51064&#53552 &#48320&#49688&#44032 &#44032&#47532&#53412&#45716 &#44050&#51012 &#48372&#50668&#51456&#45796.</li></ul>
+     </li></ul>
+<p><span class='paragraphHead' id='-17'><a id='x1-290003.1.8'></a>&#49892&#49845&#50857 &#52628&#44032 &#47749&#47161</span>
+   </p> 
+
+     <ul class='itemize1'>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>ushowcore</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>Show current instruction, registers, and stack</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>ushowmemx &lt;address&gt; &lt;length&gt;</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>Show memory in hexadecimal format</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>ushowmems &lt;address&gt;</span></span></span> </p> 
+
+                                                                     
+
+                                                                     
+          <ul class='itemize2'>
+          <li class='itemize'>Show string followed by an ASCII NULL character</li></ul>
+     </li>
+     <li class='itemize'>
+     <p><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>ushowstack &lt;length&gt;</span></span></span> </p> 
+
+          <ul class='itemize2'>
+          <li class='itemize'>Show stack</li></ul>
+     </li></ul>
+<p>
+   </p> 
+
+   <h5 class='subsubsectionHead' id='-18'><span class='titlemark'>3.1.9   </span> <a id='x1-300003.1.9'></a>&#50696&#51228&#47484 &#48373&#51228&#54644 &#45236 &#54532&#47196&#44536&#47016 &#47564&#46308&#44592</h5>
+<p>&#48176&#54252&#46108 &#50696&#51228 &#49548&#49828 &#53076&#46300&#47484 &#49688&#51221&#54616&#47732, &#51060&#54980 &#52572&#49888 &#48260&#51204&#51004&#47196 &#50629&#44536&#47112&#51060&#46300 &#54624 &#46412 &#52649&#46028&#51060 &#48156&#49373&#54633&#45768&#45796. &#50696&#51228 &#49548&#49828 &#53076&#46300&#47484 &#49688&#51221&#54644 &#48372&#44256 &#49910&#44144&#45208 &#51088&#49888&#47564&#51032 &#54532&#47196&#44536&#47016&#51012 &#47564&#46308&#44256 &#49910&#51012 &#46412&#45716 &#45796&#51020 &#44284&#51221&#51012 &#49688&#54665&#54644 &#50696&#51228 &#49548&#49828 &#53076&#46300&#47484 &#48373&#51228&#54644&#49436 &#49352 &#54532&#47196&#44536&#47016&#51012 &#47564&#46308&#50612&#50556 &#54633&#45768&#45796.
+</p> 
+<p>
+     </p> 
+<ol class='enumerate1'>
+<li class='enumerate' id='x1-30002x1'>
+     <p>&#45796&#51020 &#47700&#45684&#47484 &#49440&#53469&#54644 Run Build Task... &#52285&#51012 &#50685&#45768&#45796. </p> 
+
+          <ul class='itemize1'>
+          <li class='itemize'>VSCode <!-- l. 680 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          Menu <!-- l. 680 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          Terminal <!-- l. 680 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel'>→</mo></mrow></math>
+          Run Build Task... (&#45800&#52629&#53412: Ctrl + Shift + B)</li></ul>
+     </li>
+<li class='enumerate' id='x1-30004x2'>Run Build Task... &#52285&#50640&#49436 make xsel&#51012 &#49440&#53469&#54644 &#49892&#54665&#54633&#45768&#45796.
+     </li>
+<li class='enumerate' id='x1-30006x3'>Config selector &#52285&#51060 &#46888&#47732 &#45796&#51020 &#50696&#47484 &#49440&#53469&#54620 &#45796&#51020 <span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>Clone</span></span></span> &#48260&#53948&#51012 &#45572&#47493&#45768&#45796.
+                                                                     
+
+                                                                     
+     </li>
+<li class='enumerate' id='x1-30008x4'>Config cloner &#52285&#51060 &#46888&#47732 &#50724&#47480 &#51901 &#54616&#45800&#51032 &#51077&#47141 &#53581&#49828&#53944 &#48149&#49828&#50640 &#49352 &#54532&#47197&#44536&#47016 &#51060&#47492&#51012 &#51077&#47141&#54620 &#54980, <span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>Ok</span></span></span> &#48260&#53948&#51012 &#45572&#47493&#45768&#45796.
+     </li>
+<li class='enumerate' id='x1-30010x5'><span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>Clone succeeded</span></span></span> &#52285&#51060 &#46888&#47732 <span class='obeylines-h'><span class='verb'><span class='cmtt-10x-x-109'>OK</span></span></span> &#48260&#53948&#51012 &#45572&#47493&#45768&#45796.
+     </li>
+<li class='enumerate' id='x1-30012x6'><a href='#-6'>3.1.3<!-- tex4ht:ref: build_example  --></a>, <a href='#-7'>3.1.4<!-- tex4ht:ref: execute_example  --></a> &#51109&#51012 &#52280&#51312&#54644 &#49352 &#54532&#47196&#44536&#47016&#51012 &#48716&#46300&#54616&#44256 &#49892&#54665&#54633&#45768&#45796.</li></ol>
+    
+</body> 
+</html>
